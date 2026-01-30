@@ -10,7 +10,6 @@
   },
   "defaultScriptType":1,
   "Folders":[
-    {"$GMFolder":"","%Name":"Tests","folderPath":"folders/Tests.yy","name":"Tests","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Input Plug-Ins","folderPath":"folders/Input Plug-Ins.yy","name":"Input Plug-Ins","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Binding Icons","folderPath":"folders/Input Plug-Ins/Binding Icons.yy","name":"Binding Icons","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"(System)","folderPath":"folders/Input Plug-Ins/Binding Icons/(System).yy","name":"(System)","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -63,6 +62,7 @@
     {"$GMFolder":"","%Name":"Virtual Buttons","folderPath":"folders/Input/Virtual Buttons.yy","name":"Virtual Buttons","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"MobileUtils","folderPath":"folders/MobileUtils.yy","name":"MobileUtils","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Extensions","folderPath":"folders/MobileUtils/Extensions.yy","name":"Extensions","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Tests","folderPath":"folders/Tests.yy","name":"Tests","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
   "ForcedPrefabProjectReferences":[],
   "IncludedFiles":[],
@@ -138,6 +138,7 @@
     {"id":{"name":"__InputMobileGetGeneralCardinalDirection","path":"scripts/__InputMobileGetGeneralCardinalDirection/__InputMobileGetGeneralCardinalDirection.yy",},},
     {"id":{"name":"__InputMobileSystem","path":"scripts/__InputMobileSystem/__InputMobileSystem.yy",},},
     {"id":{"name":"__InputMobileUpdate","path":"scripts/__InputMobileUpdate/__InputMobileUpdate.yy",},},
+    {"id":{"name":"__InputMobileUpdateDevice","path":"scripts/__InputMobileUpdateDevice/__InputMobileUpdateDevice.yy",},},
     {"id":{"name":"__InputMotionClass","path":"scripts/__InputMotionClass/__InputMotionClass.yy",},},
     {"id":{"name":"__InputMotionQuatToPitch","path":"scripts/__InputMotionQuatToPitch/__InputMotionQuatToPitch.yy",},},
     {"id":{"name":"__InputMotionQuatToRoll","path":"scripts/__InputMotionQuatToRoll/__InputMotionQuatToRoll.yy",},},

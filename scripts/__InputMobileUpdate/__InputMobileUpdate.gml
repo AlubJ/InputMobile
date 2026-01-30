@@ -5,6 +5,14 @@ function __InputMobileUpdate()
     var _system = __InputMobileSystem();
     with (_system)
     {
+        var _i = 0;
+        repeat(INPUT_MOBILE_MAX_MULTITOUCH_DEVICES)
+        {
+            __InputMobileUpdateDevice(_i);
+            ++_i;
+        }
+        
+        // TODO: remove all this please
         __touchDown = InputMouseCheck();
         __touchPressed = InputMousePressed();
         __touchReleased = InputMouseReleased();

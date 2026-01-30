@@ -45,6 +45,62 @@ function __InputMobileSystem()
         __vibrationBeginTime = 0;
         __vibrationTime = 0;
         
+        // Multitouch
+        __touchDevicePriority = array_create(INPUT_MOBILE_MAX_MULTITOUCH_DEVICES, undefined);
+        __touchDevices = [  ];
+        __lastTouchDevice = 0;
+        
+        var _i = 0;
+        repeat(INPUT_MOBILE_MAX_MULTITOUCH_DEVICES)
+        {
+            __touchDevices[_i] = {
+                // Device space
+                __deviceX: 0,
+                __deviceY: 0,
+                __deviceStartX: 0,
+                __deviceStartY: 0,
+                __deviceLastX: 0,
+                __deviceLastY: 0,
+                __deviceDeltaX: 0,
+                __deviceDeltaY: 0,
+                
+                // GUI space
+                __guiX: 0,
+                __guiY: 0,
+                __guiStartX: 0,
+                __guiStartY: 0,
+                __guiLastX: 0,
+                __guiLastY: 0,
+                __guiDeltaX: 0,
+                __guiDeltaY: 0,
+                
+                // Room space
+                __roomX: 0,
+                __roomY: 0,
+                __roomStartX: 0,
+                __roomStartY: 0,
+                __roomLastX: 0,
+                __roomLastY: 0,
+                __roomDeltaX: 0,
+                __roomDeltaY: 0,
+                
+                // Other
+                __down: false,
+                __pressed: false,
+                __released: false,
+                
+                __tap: false,
+                __doubleTap: false,
+                __tapHold: false,
+                
+                __touchTime: 0,
+                __lastTouchTime: 0,
+                
+                __releaseTime: 0,
+            };
+            ++_i;
+        }
+        
         // Mouse delta
         __pointerDeviceDeltaX = 0;
         __pointerDeviceDeltaY = 0;
