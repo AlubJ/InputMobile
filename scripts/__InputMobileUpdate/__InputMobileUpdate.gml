@@ -18,7 +18,7 @@ function __InputMobileUpdate()
             if (__touchDevices[_i].__released)
             {
                 var _index = array_get_index(__touchDevicePriority, _i);
-                array_delete(__touchDevicePriority, _i, 1);
+                array_delete(__touchDevicePriority, _index, 1);
             }
             
             ++_i;
