@@ -3,7 +3,7 @@
   "%Name":"iOS",
   "name":"iOS",
   "option_ios_build_number":0,
-  "option_ios_bundle_name":"com.company.game",
+  "option_ios_bundle_name":"dev.alub.hapticTest",
   "option_ios_defer_home_indicator":false,
   "option_ios_devices":2,
   "option_ios_display_name":"InputMobile",

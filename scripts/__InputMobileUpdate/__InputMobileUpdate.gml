@@ -43,7 +43,7 @@ function __InputMobileUpdate()
             __pointerRoomStartX = InputMouseRoomX();
             __pointerRoomStartY = InputMouseRoomY();
             
-            __gestureTimer = 0;
+            //__gestureTimer = 0;
         }
         
         if (__touchReleased)
@@ -56,12 +56,12 @@ function __InputMobileUpdate()
             __pointerRoomDistanceX = InputMouseRoomX() - __pointerRoomStartX;
             __pointerRoomDistanceY = InputMouseRoomY() - __pointerRoomStartY;
             
-            __gestureTimer = 0;
+            //__gestureTimer = 0;
         }
         
-        if (__touchDown)
-        {
-            if (__gestureTimer < INPUT_MOBILE_MAX_GESTURE_TIME) __gestureTimer++;
-        }
+        //if (__touchDown)
+        //{
+        //    if (__gestureTimer < INPUT_MOBILE_MAX_GESTURE_TIME) __gestureTimer++;
+        //}
     }
 }

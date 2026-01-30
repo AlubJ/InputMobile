@@ -1,0 +1,1 @@
+draw_text(200, room_height - 40, $"Touch time: {global.touchEndTime - global.touchStartTime}ms");

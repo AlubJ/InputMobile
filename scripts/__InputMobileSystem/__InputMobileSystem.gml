@@ -9,6 +9,25 @@ function __InputMobileSystem()
     _system = {};
     with (_system)
     {
+        // GameMaker likes to encode the system versioning when using `os_version` into a big integer on iOS for some reason
+        // so we have to use `os_get_info` for iOS
+        if (INPUT_ON_ANDROID)
+        {
+            __mobileVersion = os_version;
+            __InputTrace($"Android version: {__mobileVersion}");
+        }
+        else if (INPUT_ON_IOS)
+        {
+            var _osInfo = os_get_info();
+            __mobileVersion = real(string_split(_osInfo[? "systemVersion"], ".")[0]);
+            ds_map_destroy(_osInfo);
+            __InputTrace($"iOS version: {__mobileVersion}");
+        }
+        else
+        {
+            __mobileVersion = undefined;
+        }
+        
         // Let's see if we have mobile utils
         __mobileUtilsAvailable = true;
         try
@@ -21,6 +40,10 @@ function __InputMobileSystem()
             __mobileUtilsAvailable = false;
             __InputTrace("MobileUtils extension unavailable");
         }
+        
+        // Vibrate tracking
+        __vibrationBeginTime = 0;
+        __vibrationTime = 0;
         
         // Mouse delta
         __pointerDeviceDeltaX = 0;

@@ -13,6 +13,10 @@ function InputMobileVibratePredefined(_vibrateType)
     {
         if (MobileUtils_Vibrate_Is_Available())
         {
+            // We can safely assume that any pre-defined haptics are around 15ms.
+            _system.__vibrationTime = 15;
+            _system.__vibrationBeginTime = current_time;
+            
             MobileUtils_Vibrate_Predefined(_vibrateType);
         }
     }

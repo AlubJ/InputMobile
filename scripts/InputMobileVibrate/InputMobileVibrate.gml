@@ -13,6 +13,16 @@ function InputMobileVibrate(_vibrateTime)
     {
         if (MobileUtils_Vibrate_Is_Available())
         {
+            // Reset the vibrate time to 15ms if the iOS version is <= 13 as
+            // the shot will be replaced with a generic heavy haptic
+            if (INPUT_ON_IOS && _system.__mobileVersion <= 13)
+            {
+                _vibrateTime = 15;
+            }
+            
+            _system.__vibrationTime = _vibrateTime;
+            _system.__vibrationBeginTime = current_time;
+            
             MobileUtils_Vibrate_Shot(_vibrateTime);
         }
     }
