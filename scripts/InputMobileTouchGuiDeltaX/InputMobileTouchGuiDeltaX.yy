@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"InputMobileTouchGuiDeltaX",
   "parent":{
-    "name":"TouchDelta",
-    "path":"folders/Input Plug-Ins/Mobile/TouchDelta.yy",
+    "name":"Delta",
+    "path":"folders/Input Plug-Ins/Mobile/Touch/Delta.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"InputMobileGestureFlickLeft",
   "parent":{
-    "name":"GestureFlick",
-    "path":"folders/Input Plug-Ins/Mobile/GestureFlick.yy",
+    "name":"Flick",
+    "path":"folders/Input Plug-Ins/Mobile/Gestures/Flick.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

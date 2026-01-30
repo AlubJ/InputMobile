@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"InputMobileTouchDeviceX",
   "parent":{
-    "name":"TouchPosition",
-    "path":"folders/Input Plug-Ins/Mobile/TouchPosition.yy",
+    "name":"Position",
+    "path":"folders/Input Plug-Ins/Mobile/Touch/Position.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",
