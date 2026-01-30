@@ -44,6 +44,7 @@ function __InputMobileSystem()
         // Vibrate tracking
         __vibrationBeginTime = 0;
         __vibrationTime = 0;
+        __vibrationEnabled = true;
         
         // Multitouch
         __touchDevicePriority = [ 0 ];

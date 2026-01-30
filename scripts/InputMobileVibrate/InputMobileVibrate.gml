@@ -9,7 +9,7 @@
 function InputMobileVibrate(_vibrateTime)
 {
     static _system = __InputMobileSystem();
-    if (INPUT_ON_MOBILE && _system.__mobileUtilsAvailable)
+    if (INPUT_ON_MOBILE && _system.__mobileUtilsAvailable && _system.__vibrationEnabled)
     {
         if (MobileUtils_Vibrate_Is_Available())
         {
