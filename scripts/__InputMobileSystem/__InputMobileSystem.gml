@@ -105,43 +105,6 @@ function __InputMobileSystem()
             ++_i;
         }
         
-        // Mouse delta
-        __pointerDeviceDeltaX = 0;
-        __pointerDeviceDeltaY = 0;
-        __pointerGuiDeltaX = 0;
-        __pointerGuiDeltaY = 0;
-        __pointerRoomDeltaX = 0;
-        __pointerRoomDeltaY = 0;
-        
-        // Mouse distance
-        __pointerDeviceDistanceX = 0;
-        __pointerDeviceDistanceY = 0;
-        __pointerGuiDistanceX = 0;
-        __pointerGuiDistanceY = 0;
-        __pointerRoomDistanceX = 0;
-        __pointerRoomDistanceY = 0;
-        
-        // Mouse last
-        __pointerDeviceLastX = 0;
-        __pointerDeviceLastY = 0;
-        __pointerGuiLastX = 0;
-        __pointerGuiLastY = 0;
-        __pointerRoomLastX = 0;
-        __pointerRoomLastY = 0;
-        
-        // Mouse start
-        __pointerDeviceStartX = 0;
-        __pointerDeviceStartY = 0;
-        __pointerGuiStartX = 0;
-        __pointerGuiStartY = 0;
-        __pointerRoomStartX = 0;
-        __pointerRoomStartY = 0;
-        
-        // Touch
-        __touchDown = false;
-        __touchPressed = false;
-        __touchReleased = false;
-        
         // Define plugin
         InputPlugInDefine("Alub.Mobile", "Alun Jones", "1.0", "10.0", function ()
         {
