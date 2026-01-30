@@ -1,9 +1,12 @@
 // Feather disable all
 
 /// Returns the angle of the delta of the touch in device space.
+///
+/// @returns {Real}
 
 function InputMobileTouchDeviceDeltaAngle()
 {
-    var _system = __InputMobileSystem();
-    return point_direction(0, 0, _system.__pointerDeviceDeltaX, _system.__pointerDeviceDeltaY);
+    static _system = __InputMobileSystem();
+    var _device = _system.__touchDevices[_system.__touchDevicePriority[0]];
+    return point_direction(0, 0, _device.__deviceDeltaX, _device.__deviceDeltaY);
 }

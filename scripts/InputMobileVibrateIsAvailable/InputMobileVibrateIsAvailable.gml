@@ -6,6 +6,6 @@
 
 function InputMobileVibrateIsAvailable()
 {
-    var _system = __InputMobileSystem();
+    static _system = __InputMobileSystem();
     return (INPUT_ON_MOBILE && _system.__mobileUtilsAvailable && MobileUtils_Vibrate_Is_Available());
 }

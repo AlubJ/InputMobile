@@ -8,7 +8,7 @@
 
 function InputMobileVibratePredefined(_vibrateType)
 {
-    var _system = __InputMobileSystem();
+    static _system = __InputMobileSystem();
     if (INPUT_ON_MOBILE && _system.__mobileUtilsAvailable)
     {
         if (MobileUtils_Vibrate_Is_Available())

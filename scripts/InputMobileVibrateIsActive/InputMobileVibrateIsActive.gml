@@ -4,8 +4,11 @@
 /// vibrations.
 ///
 /// N.B. Potentially inaccurate when using device haptic presets.
+///
+/// @returns {Bool}
+
 function InputMobileVibrateIsActive()
 {
-    var _system = __InputMobileSystem();
+    static _system = __InputMobileSystem();
     return (current_time < (_system.__vibrationBeginTime + _system.__vibrationTime));
 }
