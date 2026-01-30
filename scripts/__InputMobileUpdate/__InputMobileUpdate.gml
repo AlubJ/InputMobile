@@ -9,6 +9,18 @@ function __InputMobileUpdate()
         repeat(INPUT_MOBILE_MAX_MULTITOUCH_DEVICES)
         {
             __InputMobileUpdateDevice(_i);
+            
+            if (__touchDevices[_i].__pressed)
+            {
+                array_insert(__touchDevicePriority, 0, _i);
+            }
+            
+            if (__touchDevices[_i].__released)
+            {
+                var _index = array_get_index(__touchDevicePriority, _i);
+                array_delete(__touchDevicePriority, _i, 1);
+            }
+            
             ++_i;
         }
         

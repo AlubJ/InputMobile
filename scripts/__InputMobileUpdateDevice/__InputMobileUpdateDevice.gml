@@ -10,6 +10,10 @@ function __InputMobileUpdateDevice(_deviceIndex)
         __pressed = device_mouse_check_button_pressed(_deviceIndex, mb_left);
         __released = device_mouse_check_button_released(_deviceIndex, mb_left);
         
+        __tap = false;
+        __doubleTap = false;
+        __tapHold = false;
+        
         if (__pressed)
         {
             __touchTime = 0;
@@ -25,7 +29,6 @@ function __InputMobileUpdateDevice(_deviceIndex)
         if (__released)
         {
             __lastTouchTime = __touchTime;
-            __releaseTime = current_time;
             
             __deviceDeltaX = 0;
             __deviceDeltaY = 0;
@@ -34,7 +37,43 @@ function __InputMobileUpdateDevice(_deviceIndex)
             __roomDeltaX = 0;
             __roomDeltaY = 0;
             
+            __longTapFired = false;
+            
+            var _touchDistance = point_distance(__deviceStartX, __deviceStartY, __deviceX, __deviceY);
+            
+            if (__touchTime <= INPUT_MOBILE_MAX_TAP_TIME && _touchDistance <= INPUT_MOBILE_MAX_TAP_DISTANCE)
+            {
+                var _time = current_time;
+                
+                if (_time - __releaseTime <= INPUT_MOBILE_MAX_DOUBLE_TAP_TIME)
+                {
+                    __doubleTap = true;
+                    
+                    __tapCount = 0;
+                    __pendingSingleTap = false;
+                    __releaseTime = 0;
+                }
+                else
+                {
+                    __tapCount = 1;
+                    __pendingSingleTap = true;
+                    __releaseTime = current_time;
+                }
+            }
+            
             return;
+        }
+        
+        if (__pendingSingleTap)
+        {
+            if (current_time - __releaseTime > INPUT_MOBILE_MAX_DOUBLE_TAP_TIME)
+            {
+                __tap = true;
+                
+                __pendingSingleTap = false;
+                __tapCount = 0;
+                __releaseTime = 0;
+            }
         }
         
         if (!__down)
@@ -42,9 +81,24 @@ function __InputMobileUpdateDevice(_deviceIndex)
             return;
         }
         
-        if (__down && !__pressed)
+        if (!__pressed)
         {
             __touchTime += delta_time / 1_000;
+        }
+        
+        if (!__longTapFired)
+        {
+            var _touchDistance = point_distance(__deviceStartX, __deviceStartY, __deviceX, __deviceY);
+            
+            if (__touchTime > INPUT_MOBILE_MAX_TAP_TIME && _touchDistance <= INPUT_MOBILE_MAX_TAP_DISTANCE)
+            {
+                __longTap = true;
+                __longTapFired = true;
+                
+                __pendingSingleTap = false;
+                __tapCount = false;
+                __releaseTime = 0;
+            }
         }
         
         __deviceLastX = __deviceX;

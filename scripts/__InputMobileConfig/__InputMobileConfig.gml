@@ -9,3 +9,16 @@
 // The maximum number of possible multi-touch devices that InputMobile will detect for
 // and can be increased or decreased to fit specific purposes. Default 8.
 #macro INPUT_MOBILE_MAX_MULTITOUCH_DEVICES 8
+
+// The maximum amount of time in milliseconds that a touch can be held down for it to
+// register as a tap and not a tap-and-hold. Default 30.
+#macro INPUT_MOBILE_MAX_TAP_TIME 30
+
+// The maximum amount of distance in pixels that a tap can be registered in, if the tap
+// exceeds this window then the tap will not be registered. Default 20.
+#macro INPUT_MOBILE_MAX_TAP_DISTANCE 20
+
+// The maximum time in milliseconds that a tap or double tap can be registered in.
+// If a double tap is not registered in this time window a single tap will be detected
+// instead. Default 60.
+#macro INPUT_MOBILE_MAX_DOUBLE_TAP_TIME 60

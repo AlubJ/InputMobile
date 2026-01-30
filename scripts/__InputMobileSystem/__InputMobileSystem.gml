@@ -46,7 +46,7 @@ function __InputMobileSystem()
         __vibrationTime = 0;
         
         // Multitouch
-        __touchDevicePriority = array_create(INPUT_MOBILE_MAX_MULTITOUCH_DEVICES, undefined);
+        __touchDevicePriority = [  ];
         __touchDevices = [  ];
         __lastTouchDevice = 0;
         
@@ -91,7 +91,11 @@ function __InputMobileSystem()
                 
                 __tap: false,
                 __doubleTap: false,
-                __tapHold: false,
+                __longTap: false,
+                __longTapFired: false,
+                
+                __tapCount: 0,
+                __pendingSingleTap: false,
                 
                 __touchTime: 0,
                 __lastTouchTime: 0,
