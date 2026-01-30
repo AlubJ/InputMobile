@@ -1,2 +1,2 @@
 # InputMobile
-A plug-in for [Input](https://github.com/offalynne/Input) for use on mobile. Includes wrappers for YoYoGames' [MobileUtils](https://github.com/YoYoGames/GMEXT-MobileUtils) extension vibration.
+A work-in-progress plug-in for [Input](https://github.com/offalynne/Input) for use on mobile. Includes wrappers for YoYoGames' [MobileUtils](https://github.com/YoYoGames/GMEXT-MobileUtils) extension vibration.
