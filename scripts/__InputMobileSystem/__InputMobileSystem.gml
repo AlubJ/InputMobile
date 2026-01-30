@@ -108,10 +108,17 @@ function __InputMobileSystem()
         // Define plugin
         InputPlugInDefine("Alub.Mobile", "Alun Jones", "1.0", "10.0", function ()
         {
-            InputPlugInRegisterCallback(INPUT_PLUG_IN_CALLBACK.COLLECT, undefined, function ()
+            if (INPUT_ON_MOBILE)
             {
-                __InputMobileUpdate();
-            });
+                InputPlugInRegisterCallback(INPUT_PLUG_IN_CALLBACK.COLLECT, undefined, function ()
+                {
+                    __InputMobileUpdate();
+                });
+            }
+            else
+            {
+                InputPlugInWarning("Current platform is not mobile, mobile specific features will not be enabled.");
+            }
         });
     }
     

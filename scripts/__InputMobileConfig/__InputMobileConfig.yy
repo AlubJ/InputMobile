@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"__InputMobileConfig",
   "parent":{
-    "name":"Config",
-    "path":"folders/Input Plug-Ins/Mobile/Config.yy",
+    "name":"Mobile",
+    "path":"folders/Input Plug-Ins/Mobile.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",
