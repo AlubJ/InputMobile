@@ -12,7 +12,7 @@ function __InputMobileUpdateDevice(_deviceIndex)
         
         __tap = false;
         __doubleTap = false;
-        __tapHold = false;
+        __longTap = false;
         
         if (__pressed)
         {
@@ -39,13 +39,14 @@ function __InputMobileUpdateDevice(_deviceIndex)
             
             __longTapFired = false;
             
+            // Double tap detection
             var _touchDistance = point_distance(__deviceStartX, __deviceStartY, __deviceX, __deviceY);
-            
             if (__touchTime <= INPUT_MOBILE_MAX_TAP_TIME && _touchDistance <= INPUT_MOBILE_MAX_TAP_DISTANCE)
             {
                 var _time = current_time;
+                var _secondTouchDistance = point_distance(__deviceLastX, __deviceLastY, __deviceX, __deviceLastY)
                 
-                if (_time - __releaseTime <= INPUT_MOBILE_MAX_DOUBLE_TAP_TIME)
+                if (_time - __releaseTime <= INPUT_MOBILE_MAX_DOUBLE_TAP_TIME && _secondTouchDistance <= INPUT_MOBILE_MAX_DOUBLE_TAP_DISTANCE)
                 {
                     __doubleTap = true;
                     
@@ -64,6 +65,7 @@ function __InputMobileUpdateDevice(_deviceIndex)
             return;
         }
         
+        // Single tap detection
         if (__pendingSingleTap)
         {
             if (current_time - __releaseTime > INPUT_MOBILE_MAX_DOUBLE_TAP_TIME)
@@ -86,21 +88,6 @@ function __InputMobileUpdateDevice(_deviceIndex)
             __touchTime += delta_time / 1_000;
         }
         
-        if (!__longTapFired)
-        {
-            var _touchDistance = point_distance(__deviceStartX, __deviceStartY, __deviceX, __deviceY);
-            
-            if (__touchTime > INPUT_MOBILE_MAX_TAP_TIME && _touchDistance <= INPUT_MOBILE_MAX_TAP_DISTANCE)
-            {
-                __longTap = true;
-                __longTapFired = true;
-                
-                __pendingSingleTap = false;
-                __tapCount = false;
-                __releaseTime = 0;
-            }
-        }
-        
         __deviceLastX = __deviceX;
         __deviceLastY = __deviceY;
         __guiLastX = __guiX;
@@ -121,5 +108,21 @@ function __InputMobileUpdateDevice(_deviceIndex)
         __guiDeltaY = __guiY - __guiLastY;
         __roomDeltaX = __roomX - __roomLastX;
         __roomDeltaY = __roomY - __roomLastY;
+        
+        // Long tap detection
+        if (!__longTapFired)
+        {
+            var _touchDistance = point_distance(__deviceStartX, __deviceStartY, __deviceX, __deviceY);
+            
+            if (__touchTime > INPUT_MOBILE_MAX_TAP_TIME && _touchDistance <= INPUT_MOBILE_MAX_TAP_DISTANCE)
+            {
+                __longTap = true;
+                __longTapFired = true;
+                
+                __pendingSingleTap = false;
+                __tapCount = false;
+                __releaseTime = 0;
+            }
+        }
     }
 }
