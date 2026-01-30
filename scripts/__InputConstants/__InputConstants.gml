@@ -11,8 +11,8 @@
 //                                                                        //
 ////////////////////////////////////////////////////////////////////////////
 
-#macro INPUT_VERSION  "10.2.2"
-#macro INPUT_DATE     "2025-09-20"
+#macro INPUT_VERSION  "10.3.0"
+#macro INPUT_DATE     "2026-30-01"
 
 #macro INPUT_NO_DEVICE       -666
 #macro INPUT_KBM             -1
@@ -128,7 +128,7 @@ enum INPUT_PLUG_IN_CALLBACK
 #macro INPUT_BAN_KBM       (not INPUT_ON_DESKTOP)
 #macro INPUT_BAN_TOUCH     (not INPUT_ON_MOBILE)
 #macro INPUT_BAN_GAMEPADS  false
-#macro INPUT_BAN_HOTSWAP   false
+#macro INPUT_BAN_HOTSWAP   (INPUT_ON_PS5 && INPUT_PS5_SINGLE_USER)
 
 #macro INPUT_BLOCK_MOUSE_CHECKS  INPUT_ON_CONSOLE
 

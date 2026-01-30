@@ -142,6 +142,8 @@ function __InputCreateTypeLookup()
         _struct[$ "32150b10"] = INPUT_GAMEPAD_TYPE_PS5;
         _struct[$ "32150c10"] = INPUT_GAMEPAD_TYPE_PS5;
         _struct[$ "32151210"] = INPUT_GAMEPAD_TYPE_PS5;
+        _struct[$ "32152410"] = INPUT_GAMEPAD_TYPE_PS5;
+        _struct[$ "32152610"] = INPUT_GAMEPAD_TYPE_PS5;
         _struct[$ "8532180d"] = INPUT_GAMEPAD_TYPE_PS5;
         _struct[$ "8532190d"] = INPUT_GAMEPAD_TYPE_PS5;
         _struct[$ "8a350401"] = INPUT_GAMEPAD_TYPE_PS5;
@@ -178,6 +180,7 @@ function __InputCreateTypeLookup()
         _struct[$ "dd330100"] = INPUT_GAMEPAD_TYPE_SWITCH;
         _struct[$ "dd330200"] = INPUT_GAMEPAD_TYPE_SWITCH;
         _struct[$ "dd330300"] = INPUT_GAMEPAD_TYPE_SWITCH;
+        _struct[$ "0d0ff000"] = INPUT_GAMEPAD_TYPE_SWITCH;
         _struct[$ "0d0fdc00"] = INPUT_GAMEPAD_TYPE_SWITCH;
         _struct[$ "6e050720"] = INPUT_GAMEPAD_TYPE_SWITCH;
         _struct[$ "6e050820"] = INPUT_GAMEPAD_TYPE_SWITCH;

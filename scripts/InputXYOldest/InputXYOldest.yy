@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"InputVibrateADSR",
+  "%Name":"InputXYOldest",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"InputVibrateADSR",
+  "name":"InputXYOldest",
   "parent":{
-    "name":"Actions",
-    "path":"folders/Input Plug-Ins/Vibration/Actions.yy",
+    "name":"Clusters",
+    "path":"folders/Input/Checkers/Clusters.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

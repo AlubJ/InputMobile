@@ -59,6 +59,7 @@ function __InputRegisterCollectPlayer()
                     var _maxRight = __thresholdMaxArray[INPUT_THRESHOLD.RIGHT];
                     
                     __lastConnectedGamepadType = InputDeviceGetGamepadType(_device);
+                    var _hotswapBlocked = false;
                     
                     var _readArray = __InputGamepadGetReadArray(_device);
                     
@@ -98,6 +99,7 @@ function __InputRegisterCollectPlayer()
                                     else
                                     {
                                         _valueClamp = (_raw > 0);
+                                        _hotswapBlocked = true; //Block hotswap on a button
                                     }
                                 }
                             }
@@ -110,6 +112,8 @@ function __InputRegisterCollectPlayer()
                         
                         ++_i;
                     }
+                    
+                    __hotswapBlocked = _hotswapBlocked;
                 }
                 else if (_device == INPUT_KBM)
                 {

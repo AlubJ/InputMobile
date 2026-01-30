@@ -9,6 +9,12 @@
 // library, set this macro to `false`.
 #macro INPUT_SAFETY_CHECKS  true
 
+// Whether to only allow one PlayStation user to play the game when running on PlayStation 5. This
+// macro corresponds to the `InitialUserAlwaysLoggedIn` mode set in your `param.json`. Please note
+// that this macro (and the associated `param.json` mode) should only be used for single player
+// games.
+#macro INPUT_PS5_SINGLE_USER  false
+
 ////////////////
 //            //
 //  Checkers  //
@@ -133,4 +139,4 @@
 // player input within the main GameMaker update loop (see `INPUT_COLLECT_MODE` above). When you
 // want to evaluate a tick of a fixed timestep or lockstep loop then call `InputManualUpdate()`
 // once and then you may call library functions within your custom update loop as normal.
-#macro INPUT_UPDATE_AFTER_COLLECT  false
+#macro INPUT_UPDATE_AFTER_COLLECT  true
