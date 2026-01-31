@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"InputMobileGestureFlickUp",
+  "%Name":"InputMobileFlick",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"InputMobileGestureFlickUp",
+  "name":"InputMobileFlick",
   "parent":{
     "name":"Flick",
     "path":"folders/Input Plug-Ins/Mobile/Gestures/Flick.yy",

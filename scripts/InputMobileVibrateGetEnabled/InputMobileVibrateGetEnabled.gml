@@ -4,7 +4,7 @@
 ///
 /// @returns {Bool}
 
-function InputMobileVibrateSetEnabled(_enable = true)
+function InputMobileVibrateGetEnabled(_enable = true)
 {
     static _system = __InputMobileSystem();
     return _system.__vibrationEnabled;

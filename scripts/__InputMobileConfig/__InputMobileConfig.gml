@@ -22,8 +22,8 @@
 #macro INPUT_MOBILE_MAX_DOUBLE_TAP_DISTANCE 200
 
 // The minimum amount of distance in pixels for a flick gesture to be detected. This
-// should be more than `INPUT_MOBILE_MAX_TAP_DISTANCE`. Default 25.
-#macro INPUT_MOBILE_MIN_FLICK_DISTANCE 25
+// should be more than `INPUT_MOBILE_MAX_TAP_DISTANCE`. Default 50.
+#macro INPUT_MOBILE_MIN_FLICK_DISTANCE 50
 
 // The maximum amount of time in milliseconds for a flick gesture to be registered.
 // Default 200.

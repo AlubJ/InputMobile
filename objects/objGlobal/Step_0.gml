@@ -16,19 +16,19 @@ if (InputMobileLongTap())
 
 if (InputMouseReleased())
 {
-    if (InputMobileGestureFlickDown())
+    if (InputMobileFlickDown())
     {
         lastThing = "Flick down";
     }
-    if (InputMobileGestureFlickUp())
+    if (InputMobileFlickUp())
     {
         lastThing = "Flick up";
     }
-    if (InputMobileGestureFlickLeft())
+    if (InputMobileFlickLeft())
     {
         lastThing = "Flick left";
     }
-    if (InputMobileGestureFlickRight())
+    if (InputMobileFlickRight())
     {
         lastThing = "Flick right";
     }

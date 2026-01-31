@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"InputMobileGestureFlickLeft",
+  "%Name":"InputMobileFlickAngle",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"InputMobileGestureFlickLeft",
+  "name":"InputMobileFlickAngle",
   "parent":{
     "name":"Flick",
     "path":"folders/Input Plug-Ins/Mobile/Gestures/Flick.yy",

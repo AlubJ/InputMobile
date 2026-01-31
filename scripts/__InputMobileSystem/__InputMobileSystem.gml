@@ -85,42 +85,57 @@ function __InputMobileSystem()
                 __roomDeltaX: 0,
                 __roomDeltaY: 0,
                 
-                // Other
+                // Touch
                 __down: false,
                 __pressed: false,
                 __released: false,
                 
+                // Taps
                 __tap: false,
                 __doubleTap: false,
                 __longTap: false,
                 __longTapFired: false,
-                
-                __tapCount: 0,
                 __pendingSingleTap: false,
                 
+                // Gestures
+                __flick: false,
+                __flickCardinalDirection: 0,
+                __flickAngle: 0,
+                __flickSpeed: 0,
+                
+                // Timings
                 __touchTime: 0,
                 __lastTouchTime: 0,
-                
                 __releaseTime: 0,
             };
             ++_i;
         }
         
+        // Set up gestures
+        gesture_flick_speed(INPUT_MOBILE_MIN_FLICK_DISTANCE / display_get_dpi_x());
+        
         // Define plugin
         InputPlugInDefine("Alub.Mobile", "Alun Jones", "1.0", "10.0", function ()
         {
-            if (INPUT_ON_MOBILE)
-            {
+            //if (INPUT_ON_MOBILE)
+            //{
                 InputPlugInRegisterCallback(INPUT_PLUG_IN_CALLBACK.COLLECT, undefined, function ()
                 {
                     __InputMobileUpdate();
                 });
-            }
-            else
-            {
-                InputPlugInWarning("Current platform is not mobile, mobile specific features will not be enabled.");
-            }
+            //}
+            //else
+            //{
+            //    InputPlugInWarning("Current platform is not mobile, mobile specific features will not be enabled.");
+            //}
         });
+        
+        // Create gesture controller
+        __InputMobileEnsureInstance();
+        time_source_start(time_source_create(time_source_game, 1, time_source_units_frames, function ()
+        {
+            __InputMobileEnsureInstance();
+        }, [], -1));
     }
     
     return _system;

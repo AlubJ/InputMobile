@@ -14,6 +14,8 @@ function __InputMobileUpdateDevice(_deviceIndex)
         __doubleTap = false;
         __longTap = false;
         
+        __flick = false;
+        
         if (__pressed)
         {
             __touchTime = 0;
@@ -50,13 +52,11 @@ function __InputMobileUpdateDevice(_deviceIndex)
                 {
                     __doubleTap = true;
                     
-                    __tapCount = 0;
                     __pendingSingleTap = false;
                     __releaseTime = 0;
                 }
                 else
                 {
-                    __tapCount = 1;
                     __pendingSingleTap = true;
                     __releaseTime = current_time;
                 }
@@ -73,7 +73,6 @@ function __InputMobileUpdateDevice(_deviceIndex)
                 __tap = true;
                 
                 __pendingSingleTap = false;
-                __tapCount = 0;
                 __releaseTime = 0;
             }
         }
@@ -120,7 +119,6 @@ function __InputMobileUpdateDevice(_deviceIndex)
                 __longTapFired = true;
                 
                 __pendingSingleTap = false;
-                __tapCount = false;
                 __releaseTime = 0;
             }
         }
