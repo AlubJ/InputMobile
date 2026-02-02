@@ -6,9 +6,32 @@ function __InputMobileUpdateDevice(_deviceIndex)
     var _device = __InputMobileSystem().__touchDevices[_deviceIndex];
     with (_device)
     {
-        __down = device_mouse_check_button(_deviceIndex, mb_left);
-        __pressed = device_mouse_check_button_pressed(_deviceIndex, mb_left);
-        __released = device_mouse_check_button_released(_deviceIndex, mb_left);
+        // Edge testing (Taken from Input's mouse checkers)
+        if (INPUT_MOBILE_EDGE_DEADZONE > 0)
+        {
+            var _x = device_mouse_raw_x(_deviceIndex);
+            var _y = device_mouse_raw_y(_deviceIndex);
+            
+            if ((_x < INPUT_MOBILE_EDGE_DEADZONE) || (_x > (display_get_width()  - INPUT_MOBILE_EDGE_DEADZONE))
+            ||  (_y < INPUT_MOBILE_EDGE_DEADZONE) || (_y > (display_get_height() - INPUT_MOBILE_EDGE_DEADZONE)))
+            {
+                __down = false;
+                __pressed = false;
+                __released = false;
+            }
+            else
+            {
+                __down = device_mouse_check_button(_deviceIndex, mb_left);
+                __pressed = device_mouse_check_button_pressed(_deviceIndex, mb_left);
+                __released = device_mouse_check_button_released(_deviceIndex, mb_left);
+            }
+        }
+        else
+        {
+            __down = device_mouse_check_button(_deviceIndex, mb_left);
+            __pressed = device_mouse_check_button_pressed(_deviceIndex, mb_left);
+            __released = device_mouse_check_button_released(_deviceIndex, mb_left);
+        }
         
         __tap = false;
         __doubleTap = false;

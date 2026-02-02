@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"__InputMobileGetGeneralCardinalDirection",
+  "%Name":"__InputMobileGetCardinalDirection",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"__InputMobileGetGeneralCardinalDirection",
+  "name":"__InputMobileGetCardinalDirection",
   "parent":{
     "name":"(System)",
     "path":"folders/Input Plug-Ins/Mobile/(System).yy",

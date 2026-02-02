@@ -28,3 +28,8 @@
 // The maximum amount of time in milliseconds for a flick gesture to be registered.
 // Default 200.
 #macro INPUT_MOBILE_MAX_FLICK_TIME 200
+
+// Margin in pixels around the screen edge where gaining or losing a touch point will not register
+// "pressed" or "released". Prevents false positives when dragging on to or off of the edge of a
+// touchscreen. Default 35.
+#macro INPUT_MOBILE_EDGE_DEADZONE 35

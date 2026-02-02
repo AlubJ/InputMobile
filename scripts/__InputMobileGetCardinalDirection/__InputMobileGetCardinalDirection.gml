@@ -1,6 +1,6 @@
 // Feather disable all
 
-function __InputMobileGetGeneralCardinalDirection(_dx, _dy)
+function __InputMobileGetCardinalDirection(_dx, _dy)
 {
     if (abs(_dx) > abs(_dy))
     {
