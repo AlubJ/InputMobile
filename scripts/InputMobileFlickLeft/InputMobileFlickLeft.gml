@@ -8,5 +8,6 @@
 
 function InputMobileFlickLeft(_deviceID = undefined)
 {
-    return __InputMobileGetDevice(_deviceID).__flickCardinalDirection == 180;
+    var _device = __InputMobileGetDevice(_deviceID);
+    return (_device.flick && _device.__flickCardinalDirection == 180);
 }
