@@ -33,5 +33,9 @@ function __InputMobileUpdate()
         // Reset rotate
         __rotateStart = false;
         __rotateEnd = false;
+        
+        // Reset zooming
+        __zoomStart = false;
+        __zoomEnd = false;
     }
 }

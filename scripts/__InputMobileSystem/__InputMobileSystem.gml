@@ -136,6 +136,21 @@ function __InputMobileSystem()
         __rotateDevice0 = undefined;
         __rotateDevice1 = undefined;
         
+        // Zooming
+        __zoomStart = false;
+        __zoomEnd = false;
+        __zooming = false;
+        __zoomRelativeScale = 0;
+        __zoomAbsoluteScale = 0;
+        __zoomRoomMidPointX = 0;
+        __zoomRoomMidPointY = 0;
+        __zoomGuiMidPointX = 0;
+        __zoomGuiMidPointY = 0;
+        __zoomDeviceMidPointX = 0;
+        __zoomDeviceMidPointY = 0;
+        __zoomDevice0 = undefined;
+        __zoomDevice1 = undefined;
+        
         // Set the GameMaker flick speed to 0.5 inches so that a flick fires when a flick happens
         gesture_flick_speed(0.5);
         
