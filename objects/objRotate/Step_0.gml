@@ -13,7 +13,7 @@ if (InputMobileRotateEnd())
 
 if (InputMobileZooming())
 {
-    currentScale = InputMobileZoomScale();
+    currentScale = InputMobileZoomScale() - 1;
     image_xscale = lastScale + currentScale;
     image_yscale = image_xscale;
 }

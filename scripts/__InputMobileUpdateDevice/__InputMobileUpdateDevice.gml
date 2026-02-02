@@ -9,7 +9,7 @@ function __InputMobileUpdateDevice(_deviceIndex)
     with (_device)
     {
         // Edge testing (Taken from Input's mouse checkers)
-        var _preDown = __down;
+        var _prevDown = __down;
         
         if (INPUT_MOBILE_EDGE_DEADZONE > 0)
         {
