@@ -319,6 +319,7 @@
     {"id":{"name":"InputMobileTouchGuiDeltaY","path":"scripts/InputMobileTouchGuiDeltaY/InputMobileTouchGuiDeltaY.yy",},},
     {"id":{"name":"InputMobileTouchGuiX","path":"scripts/InputMobileTouchGuiX/InputMobileTouchGuiX.yy",},},
     {"id":{"name":"InputMobileTouchGuiY","path":"scripts/InputMobileTouchGuiY/InputMobileTouchGuiY.yy",},},
+    {"id":{"name":"InputMobileTouchLastDevice","path":"scripts/InputMobileTouchLastDevice/InputMobileTouchLastDevice.yy",},},
     {"id":{"name":"InputMobileTouchPressed","path":"scripts/InputMobileTouchPressed/InputMobileTouchPressed.yy",},},
     {"id":{"name":"InputMobileTouchReleased","path":"scripts/InputMobileTouchReleased/InputMobileTouchReleased.yy",},},
     {"id":{"name":"InputMobileTouchRoomDeltaAngle","path":"scripts/InputMobileTouchRoomDeltaAngle/InputMobileTouchRoomDeltaAngle.yy",},},
