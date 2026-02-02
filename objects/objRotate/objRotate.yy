@@ -9,8 +9,8 @@
   "name":"objRotate",
   "overriddenProperties":[],
   "parent":{
-    "name":"InputMobile",
-    "path":"InputMobile.yyp",
+    "name":"Tests",
+    "path":"folders/Tests.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -1,5 +1,5 @@
-var _px = InputMobileTouchRoomX();
-var _py = InputMobileTouchRoomY();
+var _px = InputMobileRoomX();
+var _py = InputMobileRoomY();
 
 if (InputMobileDragStart() && point_in_rectangle(_px, _py, bbox_left, bbox_top, bbox_right, bbox_bottom))
 {

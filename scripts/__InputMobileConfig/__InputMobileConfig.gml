@@ -23,11 +23,11 @@
 #macro INPUT_MOBILE_MAX_DOUBLE_TAP_TIME 200
 
 // The maximum distance in pixels from the firt tap that a double tap will be registered.
-// This will tune the double tap to a general area. Default 200.
-#macro INPUT_MOBILE_MAX_DOUBLE_TAP_DISTANCE 200
+// This will tune the double tap to a general area. Default 100.
+#macro INPUT_MOBILE_MAX_DOUBLE_TAP_DISTANCE 100
 
 // The minimum amount of distance in pixels in one frame for a flick gesture to be detected.
-// Default 25.
+// Default 10.
 #macro INPUT_MOBILE_MIN_FLICK_DISTANCE 10
 
 // The minimum angle a rotate gesture needs to rotate from its starting place for a rotation

@@ -9,6 +9,8 @@ function __InputMobileUpdateDevice(_deviceIndex)
     with (_device)
     {
         // Edge testing (Taken from Input's mouse checkers)
+        var _preDown = __down;
+        
         if (INPUT_MOBILE_EDGE_DEADZONE > 0)
         {
             var _x = device_mouse_raw_x(_deviceIndex);
@@ -19,7 +21,7 @@ function __InputMobileUpdateDevice(_deviceIndex)
             {
                 __down = false;
                 __pressed = false;
-                __released = false;
+                __released = _prevDown ? true : false; // Always release if we've slid the touch to the edge of the device
             }
             else
             {
@@ -72,7 +74,7 @@ function __InputMobileUpdateDevice(_deviceIndex)
             
             // Double tap detection
             var _touchDistance = point_distance(__deviceStartX, __deviceStartY, __deviceX, __deviceY);
-            if (__touchTime <= INPUT_MOBILE_MAX_TAP_TIME && _touchDistance <= INPUT_MOBILE_MAX_TAP_DISTANCE && !_system.__rotating)
+            if (__touchTime <= INPUT_MOBILE_MAX_TAP_TIME && _touchDistance <= INPUT_MOBILE_MAX_TAP_DISTANCE && !_system.__rotating && !_system.__zooming)
             {
                 var _time = current_time;
                 var _secondTouchDistance = point_distance(__deviceLastX, __deviceLastY, __deviceX, __deviceLastY)
@@ -95,7 +97,7 @@ function __InputMobileUpdateDevice(_deviceIndex)
         }
         
         // Single tap detection
-        if (__pendingSingleTap && !_system.__rotating)
+        if (__pendingSingleTap && !_system.__rotating && !_system.__zooming)
         {
             if (current_time - __releaseTime > INPUT_MOBILE_MAX_DOUBLE_TAP_TIME)
             {
@@ -138,7 +140,7 @@ function __InputMobileUpdateDevice(_deviceIndex)
         __roomDeltaY = __roomY - __roomLastY;
         
         // Long tap detection
-        if (!__longTapFired && !_system.__rotating)
+        if (!__longTapFired && !_system.__rotating && !_system.__zooming)
         {
             var _touchDistance = point_distance(__deviceStartX, __deviceStartY, __deviceX, __deviceY);
             
