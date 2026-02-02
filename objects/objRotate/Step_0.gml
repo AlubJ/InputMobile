@@ -1,10 +1,27 @@
 if (InputMobileRotating())
 {
-    image_angle = InputMobileRotateAbsoluteAngle();
+    currentRot = InputMobileRotateAbsoluteAngle();
+    image_angle = lastRot + currentRot;
+}
+
+if (InputMobileRotateEnd())
+{
+    image_angle = lastRot + currentRot;
+    lastRot = image_angle;
+    currentRot = 0;
 }
 
 if (InputMobileZooming())
 {
-    image_xscale = InputMobileZoomScale();
-    image_yscale = InputMobileZoomScale();
+    currentScale = InputMobileZoomScale();
+    image_xscale = lastScale + currentScale;
+    image_yscale = image_xscale;
+}
+
+if (InputMobileZoomEnd())
+{
+    image_xscale = lastScale + currentScale;
+    image_yscale = image_xscale;
+    lastScale = image_xscale;
+    currentScale = 0;
 }

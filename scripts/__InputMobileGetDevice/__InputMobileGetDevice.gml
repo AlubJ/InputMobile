@@ -10,7 +10,7 @@ function __InputMobileGetDevice(_deviceID)
     }
     else
     {
-        if (_deviceID < 0 || _deviceID > INPUT_MOBILE_MAX_MULTITOUCH_DEVICES)
+        if (_deviceID < 0 || _deviceID >= INPUT_MOBILE_MAX_MULTITOUCH_DEVICES)
         {
             InputPlugInError("Device ID outside of range of acceptable multitouch devices");
         }
