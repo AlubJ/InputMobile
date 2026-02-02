@@ -103,6 +103,11 @@ function __InputMobileSystem()
                 __flickAngle: 0,
                 __flickSpeed: 0,
                 
+                // Device tilt
+                __yaw: 0,
+                __pitch: 0,
+                __roll: 0,
+                
                 // Timings
                 __touchTime: 0,
                 __lastTouchTime: 0,
