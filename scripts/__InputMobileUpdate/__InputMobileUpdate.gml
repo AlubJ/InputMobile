@@ -13,6 +13,7 @@ function __InputMobileUpdate()
             if (__touchDevices[_i].__pressed)
             {
                 array_insert(__touchDevicePriority, 0, _i);
+                __lastTouchDevice = _i;
             }
             
             if (__touchDevices[_i].__released)

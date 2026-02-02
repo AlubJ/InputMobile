@@ -2,10 +2,11 @@
 
 /// Returns back the speed of the flick.
 ///
-/// @returns {Real}
+/// @param {Real} [deviceID] The device ID to check. Pass nothing or `undefined` to use the youngest active device index.
+///
+/// @returns {Bool}
 
-function InputMobileFlickSpeed()
+function InputMobileFlickSpeed(_deviceID = undefined)
 {
-    static _system = __InputMobileSystem();
-    return _system.__touchDevices[_system.__touchDevicePriority[0]].__flickSpeed;
+    return __InputMobileGetDevice(_deviceID).__flickSpeed;
 }

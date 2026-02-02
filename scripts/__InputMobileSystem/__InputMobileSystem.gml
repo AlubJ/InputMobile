@@ -47,7 +47,7 @@ function __InputMobileSystem()
         __vibrationEnabled = true;
         
         // Multitouch
-        __touchDevicePriority = [ 0 ];
+        __touchDevicePriority = [  ];
         __touchDevices = [  ];
         __lastTouchDevice = 0;
         

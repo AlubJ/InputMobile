@@ -2,10 +2,11 @@
 
 /// Returns the X delta of the touch in device space.
 ///
-/// @returns {Real}
+/// @param {Real} [deviceID] The device ID to check. Pass nothing or `undefined` to use the youngest active device index.
+///
+/// @returns {Bool}
 
-function InputMobileTouchDeviceDeltaX()
+function InputMobileTouchDeviceDeltaX(_deviceID = undefined)
 {
-    static _system = __InputMobileSystem();
-    return (_system.__touchDevices[_system.__touchDevicePriority[0]].__deviceDeltaX);
+    return __InputMobileGetDevice(_deviceID).__deviceDeltaX;
 }
