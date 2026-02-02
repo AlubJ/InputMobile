@@ -6,7 +6,7 @@
 
 <div align = center>
 
-[![Badge License]][License]   [![Badge Download]][Download]   [![Badge Documentation]][Documentation]
+[![Badge License]][License]   [![Badge Download]][Download]   [![Badge Documentation]][Documentation]
 
 </div>
 
