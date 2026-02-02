@@ -4,6 +4,11 @@
 // and can be increased or decreased to fit specific purposes. Default 8.
 #macro INPUT_MOBILE_MAX_MULTITOUCH_DEVICES 8
 
+// Margin in pixels around the screen edge where gaining or losing a touch point will not register
+// "pressed" or "released". Prevents false positives when dragging on to or off of the edge of a
+// touchscreen. Default 35.
+#macro INPUT_MOBILE_EDGE_DEADZONE 35
+
 // The maximum amount of time in milliseconds that a touch can be held down for it to
 // register as a tap and not a tap-and-hold. Default 200.
 #macro INPUT_MOBILE_MAX_TAP_TIME 200
@@ -25,7 +30,6 @@
 // Default 25.
 #macro INPUT_MOBILE_MIN_FLICK_DISTANCE 10
 
-// Margin in pixels around the screen edge where gaining or losing a touch point will not register
-// "pressed" or "released". Prevents false positives when dragging on to or off of the edge of a
-// touchscreen. Default 35.
-#macro INPUT_MOBILE_EDGE_DEADZONE 35
+// The minimum angle a rotate gesture needs to rotate from its starting place for a rotation
+// to be detected. Default 5.
+#macro INPUT_MOBILE_MIN_ROTATE_ANGLE 5

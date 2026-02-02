@@ -121,8 +121,26 @@ function __InputMobileSystem()
             ++_i;
         }
         
-        // Sets the GameMaker flick speed to 0.5 inches so that a flick fires when a flick happens.
+        // Rotate
+        __rotateStart = false;
+        __rotateEnd = false;
+        __rotating = false;
+        __rotateRelativeAngle = 0;
+        __rotateAbsoluteAngle = 0;
+        __rotateRoomPivotX = 0;
+        __rotateRoomPivotY = 0;
+        __rotateGuiPivotX = 0;
+        __rotateGuiPivotY = 0;
+        __rotateDevicePivotX = 0;
+        __rotateDevicePivotY = 0;
+        __rotateDevice0 = undefined;
+        __rotateDevice1 = undefined;
+        
+        // Set the GameMaker flick speed to 0.5 inches so that a flick fires when a flick happens
         gesture_flick_speed(0.5);
+        
+        // Set the GameMaker rotate angle
+        gesture_rotate_angle(INPUT_MOBILE_MIN_ROTATE_ANGLE);
         
         // Define plugin
         InputPlugInDefine("Alub.Mobile", "Alun Jones", "1.0", "10.0", function ()

@@ -3,6 +3,8 @@
 /// @ignore
 function __InputMobileUpdateDevice(_deviceIndex)
 {
+    static _system = __InputMobileSystem();
+    
     var _device = __InputMobileSystem().__touchDevices[_deviceIndex];
     with (_device)
     {
@@ -70,7 +72,7 @@ function __InputMobileUpdateDevice(_deviceIndex)
             
             // Double tap detection
             var _touchDistance = point_distance(__deviceStartX, __deviceStartY, __deviceX, __deviceY);
-            if (__touchTime <= INPUT_MOBILE_MAX_TAP_TIME && _touchDistance <= INPUT_MOBILE_MAX_TAP_DISTANCE)
+            if (__touchTime <= INPUT_MOBILE_MAX_TAP_TIME && _touchDistance <= INPUT_MOBILE_MAX_TAP_DISTANCE && !_system.__rotating)
             {
                 var _time = current_time;
                 var _secondTouchDistance = point_distance(__deviceLastX, __deviceLastY, __deviceX, __deviceLastY)
@@ -93,7 +95,7 @@ function __InputMobileUpdateDevice(_deviceIndex)
         }
         
         // Single tap detection
-        if (__pendingSingleTap)
+        if (__pendingSingleTap && !_system.__rotating)
         {
             if (current_time - __releaseTime > INPUT_MOBILE_MAX_DOUBLE_TAP_TIME)
             {
@@ -136,7 +138,7 @@ function __InputMobileUpdateDevice(_deviceIndex)
         __roomDeltaY = __roomY - __roomLastY;
         
         // Long tap detection
-        if (!__longTapFired)
+        if (!__longTapFired && !_system.__rotating)
         {
             var _touchDistance = point_distance(__deviceStartX, __deviceStartY, __deviceX, __deviceY);
             

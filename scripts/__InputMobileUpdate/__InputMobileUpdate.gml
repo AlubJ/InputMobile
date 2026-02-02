@@ -29,5 +29,9 @@ function __InputMobileUpdate()
         __yaw = device_get_tilt_y();
         __pitch = device_get_tilt_z();
         __roll = device_get_tilt_x();
+        
+        // Reset rotate
+        __rotateStart = false;
+        __rotateEnd = false;
     }
 }
