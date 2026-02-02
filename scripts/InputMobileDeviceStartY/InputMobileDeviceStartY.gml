@@ -4,9 +4,9 @@
 ///
 /// @param {Real} [deviceID] The device ID to check. Pass nothing or `undefined` to use the youngest active device index.
 ///
-/// @returns {Bool}
+/// @returns {Real}
 
-function InputMobileStartDeviceY(_deviceID = undefined)
+function InputMobileDeviceStartY(_deviceID = undefined)
 {
     return __InputMobileGetDevice(_deviceID).__deviceStartY;
 }

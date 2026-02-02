@@ -6,7 +6,7 @@
   "name":"InputMobileDoubleTap",
   "parent":{
     "name":"Tap",
-    "path":"folders/Input Plug-Ins/Mobile/Tap.yy",
+    "path":"folders/Input Plug-Ins/Mobile/Gestures/Tap.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

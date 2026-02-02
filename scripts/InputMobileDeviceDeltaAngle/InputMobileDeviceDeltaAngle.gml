@@ -7,7 +7,7 @@
 ///
 /// @returns {Bool}
 
-function InputMobileTouchDeviceDeltaAngle(_default, _deviceID = undefined)
+function InputMobileDeviceDeltaAngle(_default, _deviceID = undefined)
 {
     var _device = __InputMobileGetDevice(_deviceID);
     if (point_distance(0, 0, _device.__deviceDeltaX, _device.__deviceDeltaY) < 1)

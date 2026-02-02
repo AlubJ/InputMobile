@@ -1,0 +1,5 @@
+// Feather disable all
+
+#macro INPUT_MOBILE_VERSION "1.0.0"
+#macro INPUT_MOBILE_TARGET_VERISON "10.0"
+#macro INPUT_MOBILE_DATE "2026-02-03"

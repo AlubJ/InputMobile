@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"InputMobileRotateRelativeAngle",
+  "%Name":"InputMobileRotateAngle",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"InputMobileRotateRelativeAngle",
+  "name":"InputMobileRotateAngle",
   "parent":{
     "name":"Rotating",
     "path":"folders/Input Plug-Ins/Mobile/Gestures/Rotating.yy",

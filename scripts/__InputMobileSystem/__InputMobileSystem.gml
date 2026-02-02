@@ -158,7 +158,7 @@ function __InputMobileSystem()
         gesture_rotate_angle(INPUT_MOBILE_MIN_ROTATE_ANGLE);
         
         // Define plugin
-        InputPlugInDefine("Alub.Mobile", "Alun Jones", "1.0", "10.0", function ()
+        InputPlugInDefine("Alub.Mobile", "Alun Jones", INPUT_MOBILE_VERSION, INPUT_MOBILE_TARGET_VERISON, function ()
         {
             if (INPUT_ON_MOBILE || INPUT_ON_SWITCH)
             {

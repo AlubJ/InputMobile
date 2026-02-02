@@ -1,6 +1,6 @@
 if (InputMobileRotating())
 {
-    currentRot = InputMobileRotateAbsoluteAngle();
+    currentRot = InputMobileRotateAngle();
     image_angle = lastRot + currentRot;
 }
 

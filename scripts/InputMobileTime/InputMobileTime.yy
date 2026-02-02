@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"InputMobileTap",
+  "%Name":"InputMobileTime",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"InputMobileTap",
+  "name":"InputMobileTime",
   "parent":{
-    "name":"Tap",
-    "path":"folders/Input Plug-Ins/Mobile/Gestures/Tap.yy",
+    "name":"Touch",
+    "path":"folders/Input Plug-Ins/Mobile/Touch.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

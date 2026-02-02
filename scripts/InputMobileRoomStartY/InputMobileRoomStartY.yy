@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"InputMobileStartDeviceX",
+  "%Name":"InputMobileRoomStartY",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"InputMobileStartDeviceX",
+  "name":"InputMobileRoomStartY",
   "parent":{
     "name":"Start",
     "path":"folders/Input Plug-Ins/Mobile/Touch/Start.yy",
