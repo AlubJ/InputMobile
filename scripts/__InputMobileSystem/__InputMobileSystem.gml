@@ -160,17 +160,17 @@ function __InputMobileSystem()
         // Define plugin
         InputPlugInDefine("Alub.Mobile", "Alun Jones", "1.0", "10.0", function ()
         {
-            //if (INPUT_ON_MOBILE)
-            //{
+            if (INPUT_ON_MOBILE || INPUT_ON_SWITCH)
+            {
                 InputPlugInRegisterCallback(INPUT_PLUG_IN_CALLBACK.COLLECT, undefined, function ()
                 {
                     __InputMobileUpdate();
                 });
-            //}
-            //else
-            //{
-            //    InputPlugInWarning("Current platform is not mobile, mobile specific features will not be enabled.");
-            //}
+            }
+            else
+            {
+                InputPlugInWarning("Current platform is not mobile or Nintendo Switch, mobile specific features will not be enabled. Please check platform before using InputMobile features.");
+            }
         });
         
         // Create gesture controller
