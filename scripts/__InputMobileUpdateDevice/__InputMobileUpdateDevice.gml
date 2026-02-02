@@ -38,6 +38,8 @@ function __InputMobileUpdateDevice(_deviceIndex)
         __longTap = false;
         
         __flick = false;
+        __draggingStart = false;
+        __draggingEnd = false;
         
         if (__pressed)
         {
@@ -63,6 +65,8 @@ function __InputMobileUpdateDevice(_deviceIndex)
             __roomDeltaY = 0;
             
             __longTapFired = false;
+            __dragging = false;
+            __draggingEnd = true;
             
             // Double tap detection
             var _touchDistance = point_distance(__deviceStartX, __deviceStartY, __deviceX, __deviceY);
@@ -99,11 +103,6 @@ function __InputMobileUpdateDevice(_deviceIndex)
                 __releaseTime = 0;
             }
         }
-        
-        // Device tilt
-        __yaw = device_get_tilt_y();
-        __pitch = device_get_tilt_z();
-        __roll = device_get_tilt_x();
         
         if (!__down)
         {
@@ -145,6 +144,9 @@ function __InputMobileUpdateDevice(_deviceIndex)
             {
                 __longTap = true;
                 __longTapFired = true;
+                
+                __draggingStart = true;
+                __dragging = true;
                 
                 __pendingSingleTap = false;
                 __releaseTime = 0;

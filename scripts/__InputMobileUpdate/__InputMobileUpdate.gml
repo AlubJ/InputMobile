@@ -24,5 +24,10 @@ function __InputMobileUpdate()
             
             ++_i;
         }
+        
+        // Device tilt
+        __yaw = device_get_tilt_y();
+        __pitch = device_get_tilt_z();
+        __roll = device_get_tilt_x();
     }
 }

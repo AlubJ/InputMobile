@@ -21,13 +21,9 @@
 // This will tune the double tap to a general area. Default 200.
 #macro INPUT_MOBILE_MAX_DOUBLE_TAP_DISTANCE 200
 
-// The minimum amount of distance in pixels for a flick gesture to be detected. This
-// should be more than `INPUT_MOBILE_MAX_TAP_DISTANCE`. Default 50.
-#macro INPUT_MOBILE_MIN_FLICK_DISTANCE 50
-
-// The maximum amount of time in milliseconds for a flick gesture to be registered.
-// Default 200.
-#macro INPUT_MOBILE_MAX_FLICK_TIME 200
+// The minimum amount of distance in pixels in one frame for a flick gesture to be detected.
+// Default 25.
+#macro INPUT_MOBILE_MIN_FLICK_DISTANCE 10
 
 // Margin in pixels around the screen edge where gaining or losing a touch point will not register
 // "pressed" or "released". Prevents false positives when dragging on to or off of the edge of a

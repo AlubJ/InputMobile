@@ -46,6 +46,11 @@ function __InputMobileSystem()
         __vibrationTime = 0;
         __vibrationEnabled = true;
         
+        // Device tilt
+        __yaw = 0;
+        __pitch = 0;
+        __roll = 0;
+        
         // Multitouch
         __touchDevicePriority = [  ];
         __touchDevices = [  ];
@@ -97,16 +102,16 @@ function __InputMobileSystem()
                 __longTapFired: false,
                 __pendingSingleTap: false,
                 
-                // Gestures
+                // Flicking
                 __flick: false,
                 __flickCardinalDirection: 0,
                 __flickAngle: 0,
                 __flickSpeed: 0,
                 
-                // Device tilt
-                __yaw: 0,
-                __pitch: 0,
-                __roll: 0,
+                // Dragging
+                __draggingStart: false,
+                __draggingEnd: false,
+                __dragging: false,
                 
                 // Timings
                 __touchTime: 0,
@@ -116,8 +121,8 @@ function __InputMobileSystem()
             ++_i;
         }
         
-        // Set up gestures
-        gesture_flick_speed(INPUT_MOBILE_MIN_FLICK_DISTANCE / display_get_dpi_x());
+        // Sets the GameMaker flick speed to 0.5 inches so that a flick fires when a flick happens.
+        gesture_flick_speed(0.5);
         
         // Define plugin
         InputPlugInDefine("Alub.Mobile", "Alun Jones", "1.0", "10.0", function ()
